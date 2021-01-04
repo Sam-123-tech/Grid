@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Mediaquaries</title>
+    <style>
+         .container {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer ';
+    }
+    @media only screen and (max-width:400px) {
+        body {
+            background-color: rgb(255, 0, 0);
+        }
+        .container {
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'footer footer footer footer ';
+        }
+        span {
+            display: block;
+            text-align: center;
+        }
+    }
+    @media only screen and (min-width: 300px) and (max-width:550px) {
+        body {
+            background-color: rgb(0, 0, 255);
+        }
+        .container {
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'footer footer footer footer ';
+        }
+        aside {
+            display: none;
+        }
+        span {
+            display: block;
+            text-align: center;
+        }
+        @media (min-width: 500px) and (max-width:850px) {
+        body {
+            background-color: rgb(0, 255, 0);
+        }
+        .container {
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'footer footer footer footer ';
+        }
+        span {
+            display: block;
+            text-align: center;
+        }
+    }
+    }
+    @media (min-width: 800px) {
+        body {
+            background-color: rgb(255, 251, 0);
+        }
+    }
+nav {
+        grid-area: navbar;
+    }
+    section {
+        grid-area: section;
+    }
+    aside {
+        grid-area: aside;
+    }
+    footer {
+        grid-area: footer;
+        text-align: center;
+    }
+    .bdr {
+        border: 8px solid rgb(255, 0, 128);
+        padding: 10px 23px;
+        background-color: rgb(162, 0, 255);
+    }
+    .bdr span {
+        margin: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>About</span>
+            <span>Services</span>
+            <span>Contact</span> 
+        </nav>
+        <section class="bdr">
+            <h2>Learn Coding in Gyanin Academy</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque nemo cupiditate distinctio et
+                expedita. Delectus quaerat accusamus inventore tenetur error quam minus, provident fugit repellat
+                necessitatibus? Architecto itaque quidem sequi blanditiis, facere accusantium hic.lorem122 Lorem ipsum
+                dolor sit amet consectetur, adipisicing elit. Eligendi dignissimos ut rerum aut. Fuga delectus suscipit
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque nemo cupiditate distinctio et
+                expedita. Delectus quaerat accusamus inventore tenetur error quam minus, provident fugit repellat
+                necessitatibus? Architecto itaque quidem sequi blanditiis, facere accusantium hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sit libero atque recusandae adipisci amet, reiciendis nihil fuga aut voluptas deserunt minus assumenda laborum vero a ipsum? Esse, consequuntur distinctio!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus recusandae nostrum nihil, vel debitis inventore dolorem eos libero illo odit neque quod quidem ipsam aspernatur maiores? Temporibus iste accusantium nostrum!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, ex blanditiis tenetur accusantium id nam iure repellendus tempore ullam corporis maiores magnam ipsum sit expedita perferendis sunt quia numquam reprehenderit.
+            </section>
+            <aside class="bdr">
+                <h1>More about us</h1>
+                <P>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consectetur voluptate at vero, ipsam esse aliquam ad magni quisquam ratione laudantium fugit soluta obcaecati molestiae beatae harum optio nam nesciunt.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem repudiandae explicabo illo, esse iste rerum praesentium, nemo dignissimos, odio omnis natus quisquam dolorum sunt molestiae expedita! Accusantium sint exercitationem autem?
+                </P>
+            </aside>
+        </div>
+        <footer class="bdr">Copyright Gyanin Academy</footer>
+</body>
+</html>   
